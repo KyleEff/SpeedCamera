@@ -84,12 +84,12 @@ class Car {
             if (speed[i] < speedLimit) // Under speed limit
                 Console.WriteLine("OK");
 
-            else if (speed[i] > speedLimit) {
+            else if (speed[i] > speedLimit) { // if car is over the speed limit
 
                 for (var j = speed[i]; j > speedLimit; j -= 5)
-                    demerits[i]++;
+                    demerits[i]++; // Find out how much over and assign demerits
 
-                Console.WriteLine(demerits[i] + " demerits");
+                Console.WriteLine(demerits[i] + " demerits"); // Print demerits
 
                 if (demerits[i] > 10) { // If over 10 demerits
                     // Suspend license
@@ -100,9 +100,6 @@ class Car {
         }
     }
     
-    static void Main(string[] args) {
-
-        new Car();
-    }
+    static void Main(string[] args) {new Car();}
 }
 
